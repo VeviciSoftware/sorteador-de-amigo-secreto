@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "./components/Header/Header";
-import Body from "./components/Body/Body";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { RecoilRoot } from "recoil";
+import Formulario from "./components/Formulario/Formulario";
 
 
 const Container = styled.div`
@@ -14,8 +15,13 @@ const Container = styled.div`
 const App = () => {
   return (
     <Container>
-      <Header />
-      <Body />
+      <BrowserRouter>
+        <RecoilRoot>
+          <Routes>
+            <Route path="/" element={<Formulario />} />
+          </Routes>
+        </RecoilRoot>
+      </BrowserRouter>
     </Container>
   );
 };
