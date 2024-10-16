@@ -45,3 +45,28 @@ test("adicionar um participante caso exista um nome preenchido", () => {
   expect(input).toHaveValue("");
   expect(botao).toBeDisabled();
 });
+
+test("nomes duplicados não podem ser adicionados a lista", () => {
+  //Arrange
+  render(
+    <RecoilRoot>
+      <Formulario />
+    </RecoilRoot>
+  );
+
+  //Act
+  const input = screen.getByPlaceholderText(
+    "Insira os nomes dos participantes"
+  );
+  const botao = screen.getByRole("button");
+  fireEvent.change(input, { target: { value: "Lucas" } });
+  fireEvent.click(botao);
+  fireEvent.change(input, { target: { value: "Lucas" } });
+  fireEvent.click(botao);
+
+  const mensagemDeErro = screen.getByRole("alert");
+
+  //Assert
+  expect(mensagemDeErro).toBeInTheDocument();
+  expect(mensagemDeErro.textContent).toBe("Participante já adicionado!");
+});

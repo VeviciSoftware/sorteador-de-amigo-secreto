@@ -5,5 +5,9 @@ export const listaDeParticipantesState = atom<string[]>({
     default: [],
 });
 
+export const erroState = atom<string>({
+    key: "erroState",
+    default: "",
+});
 
 
