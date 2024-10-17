@@ -19,6 +19,7 @@ const App = () => {
         <RecoilRoot>
           <Routes>
             <Route path="/" element={<Formulario />} />
+            <Route path="/sorteio" element={<div>Sorteio</div>} />
           </Routes>
         </RecoilRoot>
       </BrowserRouter>
