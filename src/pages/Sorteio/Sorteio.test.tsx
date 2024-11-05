@@ -42,7 +42,7 @@ describe('na pagina de sorteio', () => {
         </RecoilRoot>)
 
         const opcoes = screen.getAllByRole('option')
-        expect(opcoes).toHaveLength(listaParticipantes.length)
+        expect(opcoes).toHaveLength(listaParticipantes.length + 1)
     })
 
     test('o amigo secreto é exibido para cada participante', () => {
