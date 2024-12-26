@@ -1,6 +1,6 @@
 # Application Information
 
-Sorteador de Amigo Secreto (Secret Santa Sorter) is a  The Secret Santa Sorter is a project focused on testing components in React using Jest. Tests were applied to guarantee the behavior of components, test-driven design, snapshots and other tools.
+Sorteador de Amigo Secreto (Secret Santa Sorter) is a project focused on testing components in React using Jest. Tests were applied to guarantee the behavior of components, test-driven design, snapshots and other tools.
 
 Here some images:
 
