@@ -1,33 +1,12 @@
-import styled from 'styled-components';
-import LogoImage from "../../assets/images/logo.png";
-import Partipante from "../../assets/images/participante.png";
+import './Header.scss'
 
-const HeaderContainer = styled.header`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: #0b53c7;
-  width: 100%;
-`;
-
-const Logo = styled.img`
-  width: 300px;
-  height: auto;
-`;
-
-const Participante = styled.img`
-  width: 300px;
-  height: auto;
-`;
-
-const Header = () => {
+const Cabecalho = () => {
     return (
-        <HeaderContainer>
-            <Logo src={LogoImage} alt="Logo" />
-            <Participante src={Partipante} alt="Participante" />
-        </HeaderContainer>
-    );
+        <header className="cabecalho">
+            <div className="imagem-logo" role="img" aria-label='Logo do Sorteador'></div>
+            <img className='participante' src="/imagens/participante.png" alt="Participante com um presente na mão" />
+        </header>
+    )
 }
 
-export default Header;
+export default Cabecalho

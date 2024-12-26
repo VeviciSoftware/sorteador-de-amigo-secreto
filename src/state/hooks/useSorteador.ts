@@ -1,4 +1,3 @@
-import shuffle from "just-shuffle"
 import { useListaDeParticipantes } from "./useListaDeParticipantes"
 import { useSetRecoilState } from "recoil"
 import { resultadoDoAmigoSecreto } from "../atom"
